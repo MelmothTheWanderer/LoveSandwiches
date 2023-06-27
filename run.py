@@ -39,6 +39,8 @@ def validate_data(values):
     # print(values)
     # use a try to see if there is 6 numbers
     try:
+        #This isn't actually converting anything , because it isn't assigned to a variable . It is merely checking for the purposes of handling the error . 
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError (f"Exactly 6 figures required here , and you have provided {len(values)}")
         
